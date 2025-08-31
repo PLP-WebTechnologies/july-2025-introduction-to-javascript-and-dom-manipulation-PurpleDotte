@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mnandi TakeAway</title>
+</head>
+<body>
+    <div>
+        <h3>Menu</h3>
+        <p>Choose your hunger buster</p>
+        <select name="plate" id="plate_select" onchange="showSelection()">
+            <option value="kota">Kota</option>
+            <option value="quarter_leg">Quarter Leg</option>
+            <option value="steak">Steak</option>
+            <option value="chicken_wings">Chicken Wings</option>
+        </select>
+        <p id="description" style="margin-top: 20px;"></p>
+
+        <!-- Side selection hidden by default -->
+        <div class="side-option" id="side_select_container" style="display: none;">
+            <div class="radio-group">
+                <p id="side_prompt">Would you like Pap, Rice or Chips as a side?</p>
+                <label>
+                    <input type="radio" name="side" value="pap" id="pap_radio" onchange="sideSelectionChanged()"> Pap
+                </label>
+                <label>
+                    <input type="radio" name="side" value="rice" id="rice_radio" onchange="sideSelectionChanged()"> Rice
+                </label>
+                <label>
+                    <input type="radio" name="side" value="chips" id="chips_radio" onchange="sideSelectionChanged()"> Chips
+                </label>    
+            </div>
+        </div>
+
+        <!-- Receipt Table (hidden by default) -->
+        <div id="receipt_container" style="display:none;">
+            <h4>Your Order</h4>
+            <table border="1" cellpadding="5">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="receipt_body">
+                    <!-- Items will be dynamically added here -->
+                </tbody>
+            </table>
+            <p id="total_price"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

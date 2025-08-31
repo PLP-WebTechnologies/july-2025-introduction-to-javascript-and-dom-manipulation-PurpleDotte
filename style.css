@@ -1,0 +1,170 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Header */
+h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Description Text */
+#description {
+    color: #7f8c8d;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Menu Select */
+select {
+    padding: 10px;
+    font-size: 1.1em;
+    border: 2px solid #2c3e50;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    width: 60%;
+    max-width: 400px;
+    margin: 10px 0;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Radio Button Group for Side Selection */
+.radio-group {
+    margin-top: 20px;
+    text-align: left;
+    display: inline-block;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 400px;
+}
+
+label {
+    font-size: 1.1em;
+    color: #2c3e50;
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Receipt Styling */
+#receipt_container {
+    margin-top: 30px;
+    width: 60%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+td {
+    background-color: #ecf0f1;
+    border-bottom: 1px solid #ddd;
+}
+
+#total_price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e74c3c;
+    text-align: right;
+    margin-top: 15px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    select, .radio-group {
+        width: 80%;
+    }
+
+    h3 {
+        font-size: 1.6em;
+    }
+
+    #description {
+        font-size: 1em;
+    }
+
+    #receipt_container {
+        width: 90%;
+    }
+
+    table, th, td {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    select, .radio-group {
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    #description {
+        font-size: 0.9em;
+    }
+
+    table, th, td {
+        font-size: 0.9em;
+    }
+
+    #total_price {
+        font-size: 1.1em;
+    }
+}
